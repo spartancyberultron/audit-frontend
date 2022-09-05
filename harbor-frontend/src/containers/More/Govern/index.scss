@@ -1,0 +1,108 @@
+@import "../../../assets/scss/custom.scss";
+
+.govern-card {
+  .governcard-head {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid rgba($border-dark, 0.5);
+
+    .dark-mode & {
+      border-bottom: 1px solid rgba($white, 0.5);
+    }
+
+    .ant-btn {
+      margin: 5px 10px;
+    }
+  }
+
+  .govern-card-content {
+    min-height: 8rem;
+    .governlist-row {
+      display: flex;
+      padding: 20px 40px 20px;
+      border-bottom: 1px solid rgba($border-dark, 0.5);
+      cursor: pointer;
+      &:last-child {
+        border: 0;
+      }
+
+      .dark-mode & {
+        border-bottom: 1px solid rgba($white, 0.2);
+      }
+      @media only screen and (max-width: 550px) {
+        flex-direction: column;
+      }
+      .left-section {
+        width: 55%;
+        padding-right: 10%;
+        @media only screen and (max-width: 550px) {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        h3 {
+          font-size: 20px;
+
+          .dark-mode & {
+            color: $white;
+          }
+        }
+      }
+
+      .right-section {
+        width: 45%;
+        @media only screen and (max-width: 550px) {
+          width: 100%;
+        }
+        .ant-progress {
+          .ant-progress-outer {
+            padding: 0;
+          }
+
+          .ant-progress-inner {
+            background: $slider-empty-bg;
+            height: 15px;
+            overflow: inherit;
+            width: 91%;
+            .ant-progress-bg {
+              background: $secondary-color;
+              min-height: 100%;
+              position: relative;
+            }
+          }
+          .ant-progress-text {
+            .dark-mode & {
+              color: $white;
+              font-weight: normal;
+              font-size: $font-size-sm - 1;
+            }
+          }
+        }
+
+        label {
+          .dark-mode & {
+          }
+        }
+
+        p {
+          font-weight: bold;
+          font-size: 17px;
+
+          .dark-mode & {
+          }
+        }
+      }
+    }
+  }
+}
+.ant-select-dropdown {
+  background: $secondary-color !important;
+}
+
+.spinner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 8rem;
+  align-items: center;
+}

@@ -1,0 +1,42 @@
+@import "../../../../assets/scss/style.scss";
+
+.palcebid-modal {
+  .palcebid-modal-inner {
+    .row {
+      align-items: center;
+      padding: 18px 0;
+    }
+    p {
+      font-weight: normal;
+      margin-bottom: 0;
+      font-size: $font-size-lg;
+      .dark-mode & {
+        color: $white;
+      }
+    }
+    label {
+      font-weight: 300;
+      font-size: $font-size-lg;
+      .dark-mode & {
+        color: $white;
+      }
+    }
+    .ant-input {
+      background: rgba($secondary-color, 0.3);
+      border-color: rgba($secondary-color, 0.3);
+      text-align: right;
+      .dark-mode & {
+        background: $background-dark2;
+        border-color: $background-dark2;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+    }
+  }
+}
+.input-denom {
+  font-size: 11px;
+  letter-spacing: 1px;
+}

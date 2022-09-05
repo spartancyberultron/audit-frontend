@@ -1,0 +1,211 @@
+@import "../../../assets/scss/custom.scss";
+
+.airdrop-progress {
+  margin-bottom: 70px;
+  padding-right: 70px;
+  padding-left: 50px;
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    margin: 0;
+    table-layout: fixed;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: table;
+    border-radius: 10px;
+    color: #999;
+    font-size: 0;
+  }
+
+  ul > li {
+    display: table-cell;
+    text-align: center;
+    height: 14px;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+  }
+
+  ul > li:first-child > span > span:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  ul > li:last-child > span > span:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+
+  ul > li > span {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    position: relative;
+  }
+
+  ul > li > span > span {
+    display: table-cell;
+    width: 100%;
+    background: rgba($white, 0.5);
+    height: 13px;
+    line-height: 13px;
+    text-align: right;
+
+    @media screen and (max-width: 640px) {
+      height: 7px;
+      line-height: 7px;
+    }
+
+    .dot-icon {
+      position: absolute;
+      z-index: 2;
+      right: -20px;
+      top: -12px;
+
+      @media screen and (max-width: 640px) {
+        top: -9px;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+
+        @media screen and (max-width: 640px) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    p {
+      font-size: 15px;
+      position: absolute;
+      bottom: -54px;
+      right: -30px;
+
+      @media screen and (max-width: 640px) {
+        font-size: 12px;
+        bottom: -42px;
+      }
+
+      @media screen and (max-width: 500px) {
+        font-size: 9px;
+        right: -22px;
+      }
+
+      .dark-mode & {
+        color: $white;
+      }
+    }
+  }
+
+  ul > li:last-child > span > span {
+    p {
+      right: -20px;
+    }
+  }
+
+  .dot-icon {
+    .icon {
+      fill: #bfa9d7;
+    }
+  }
+
+  ul > li > span > span[data-fill="true"] {
+    background: $secondary-color;
+
+    .dot-icon {
+      .icon {
+        fill: #bfa9d7;
+      }
+
+      &::after {
+        content: "00";
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        background-size: 15px;
+        right: 0;
+        top: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 2.15234C14 1.26046 13.277 0.537354 12.385 0.537354C11.8796 0.537354 11.4288 0.770035 11.1325 1.13344L11.1322 1.13311L5.31025 8.28194L2.80564 5.56948L2.80423 5.57067C2.50918 5.25109 2.08829 5.04987 1.6189 5.04987C0.726898 5.04998 0.00390625 5.77298 0.00390625 6.66475C0.00390625 7.0875 0.167705 7.47106 0.433591 7.75895L0.432181 7.76014L4.20029 11.8407L4.2017 11.8395C4.49676 12.1589 4.91764 12.3603 5.38703 12.3603C5.89264 12.3603 6.34327 12.1276 6.63952 11.7642L6.63995 11.7645L13.638 3.17164L13.6376 3.17132C13.8641 2.89328 14.0001 2.5388 14.0001 2.15241L14 2.15234Z' fill='%23E2F7E5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+
+  ul > li > span > span[data-fill="active"] {
+    .dot-icon {
+      .icon {
+        fill: $white;
+        stroke: #bfa9d7;
+        stroke-width: 9px;
+        width: 30px;
+        border-radius: 34px;
+      }
+    }
+  }
+
+  ul > li:last-child > span {
+    padding: 0;
+  }
+
+  ul > li:last-child > span > span:after {
+    display: none;
+  }
+
+  ul > li:first-child > span > span:before {
+    display: none;
+  }
+}
+
+.airdrop-progresslist {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(#000000, 0.2);
+    padding: 15px 20px;
+
+    .dark-mode & {
+      border-bottom: 1px solid rgba($white, 0.2);
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .progresslist-left {
+      small {
+        font-size: 17px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 21px;
+        font-weight: bold;
+        .dark-mode & {
+          color: $white;
+        }
+      }
+    }
+
+    .progresslist-right {
+      p {
+        margin-bottom: 0;
+        font-size: 19px;
+        font-weight: bold;
+        .dark-mode & {
+          color: $white;
+        }
+      }
+    }
+  }
+}

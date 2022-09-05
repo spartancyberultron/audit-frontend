@@ -1,0 +1,36 @@
+@import "../../../../assets/less/variables.less";
+.commodo-borrow-page {
+  .assets-select-wrapper {
+    .ant-select {
+      // min-width: 230px;
+    }
+  }
+}
+
+.assets-select-card {
+  .assets-left{
+    &.full-with-asset{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left-label{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.cpool-select-card{
+    min-height: auto;
+  }
+}
+
+.dborrow-iconhead{
+  .dark-mode & {
+    fill: @white;
+  }
+}
+
+.dborrow-heading-left{
+  font-size: 18px;
+  text-transform: uppercase;
+}

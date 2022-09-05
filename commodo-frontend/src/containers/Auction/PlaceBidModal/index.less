@@ -1,0 +1,91 @@
+@import "../../../assets/less/variables.less";
+
+// .place-bid-modal {
+//   .place-bid-modal-inner {
+//     .row {
+//       align-items: center;
+//       padding: 18px 0;
+//     }
+//     .inputbig{
+//       padding-bottom: 10px;
+//       height: 48px;
+//     }
+//     .small-label{
+//       top: -24px;
+//       right: 10px;
+//       display: inline-block;
+//       position: relative;
+//       .dark-mode & {
+//         color: @white;
+//         font-size: @font-size-sm - 2;
+//       }
+//     }
+//     p {
+//       font-weight: normal;
+//       margin-bottom: 0;
+//       font-size: @font-size-lg;
+//       font-weight: 600;
+
+//       .dark-mode & {
+//         color: @white;
+//       }
+//     }
+
+//     label {
+//       font-weight: lighter;
+//       font-size: @font-size-lg;
+//       font-weight: 700;
+
+//       .dark-mode & {
+//         color: @white;
+//       }
+//     }
+//   }
+// }
+
+.palcebid-modal {
+  .palcebid-modal-inner {
+    .row {
+      align-items: center;
+      padding: 18px 0;
+    }
+    p {
+      font-weight: normal;
+      margin-bottom: 0;
+      font-size: @font-size-lg;
+      .dark-mode & {
+        color: @white;
+      }
+    }
+    label {
+      font-weight: 300;
+      font-size: @font-size-lg;
+      .dark-mode & {
+        color: @white;
+      }
+    }
+    .ant-input {
+      background: rgba(@secondary-color, 0.3);
+      border-color: rgba(@secondary-color, 0.3);
+      text-align: right;
+      .dark-mode & {
+        background: @background-dark2;
+        border-color: @background-dark2;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+    }
+  }
+  .alert-label {
+    color: @text-color-label-dark;
+  }
+}
+.input-denom {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.bid-custom-input .ant-input {
+  color: white !important;
+}

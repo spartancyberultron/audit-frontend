@@ -1,0 +1,35 @@
+@import "../../assets/less/variables.less";
+
+.footer {
+  text-align: center;
+  color: @text-color-dark;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .dark-mode & {
+    color: @text-color-light;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+
+    a {
+      padding: 2px 5px;
+
+      .icon {
+        width: 17px;
+
+        .dark-mode & {
+          fill: @white;
+        }
+      }
+    }
+  }
+}

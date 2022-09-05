@@ -1,0 +1,39 @@
+@import "../../assets/less/variables.less";
+
+.asset-wrapper{
+  margin: auto;
+  .balance-column{
+    p{
+      font-weight: normal;
+      margin-bottom: 2px !important;
+      display: block;
+    }
+    small{
+      font-weight: lighter;
+      color: @success-color !important;
+    }
+  }
+  .assetcard-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    h2{
+      margin-bottom: 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+      .dark-mode & {
+        color: @white;
+      }
+    }
+    p{
+      margin: 0;
+      span{
+        margin-right: 10px;
+        .dark-mode & {
+          color: @text-color-light;
+        }
+      }
+    }
+  }
+}

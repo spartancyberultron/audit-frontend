@@ -1,0 +1,89 @@
+@import "../../../assets/less/variables.less";
+
+
+.ant-btn{
+  &.filter-button{
+    font-weight: normal;
+    padding: 0 20px !important;
+    .icon{
+      margin-right: 5px;
+      width: 9px;
+      .dark-mode & {
+        fill: @white;
+      }
+    }
+    &:hover, &:focus{
+      .icon{
+        fill: @white;
+      }
+    }
+  }
+}
+
+.ant-modal{
+  &.filter-modal {
+
+    .ant-modal-close{
+      top: 30px;
+      right: 24px;
+    }
+  
+    .ant-modal-content {
+      padding: 15px 0 !important;
+
+      .ant-modal-header{
+        padding: 15px 24px;
+        .ant-modal-title{
+          font-weight: normal;
+        }
+      }
+  
+      .ant-modal-body {
+        padding: 10px 24px 20px 24px;
+  
+        .filter-modal-inner {
+          .dark-mode & {
+            color: @white;
+          }
+
+          .filter-timer{
+            display: flex;
+            justify-content: space-between;
+            .timer-card{
+              border: 2px solid @bg-dark;
+              color: @text-color-dark;
+              border-radius: 8px;
+              font-size: @font-size-base - 1;
+              height: 30px;
+              line-height: 27px;
+              padding: 0 6px;
+              .dark-mode & {
+                border-color: @white;
+                color: @white;
+              }
+            }
+          }
+
+          .ant-divider{
+            border-bottom: 1px solid rgba(@black, 0.25);
+            border-top: 0;
+            margin: 18px 0;
+            .dark-mode & {
+              border-color: rgba(#E2F7E5, 0.5);
+            }
+          }
+          
+          .labels{
+            font-weight: 400;
+            display: block;
+            margin-bottom: 8px;
+            .dark-mode & {
+              color: @white;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

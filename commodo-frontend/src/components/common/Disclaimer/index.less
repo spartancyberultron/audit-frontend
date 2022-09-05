@@ -1,0 +1,71 @@
+@import "../../../assets/less/variables.less";
+
+.disclaimer-modal {
+  .ant-modal-content {
+    padding: 35px !important;
+    .ant-modal-body {
+      padding: 0;
+      .description-text {
+        background: rgba(226, 247, 229, 0.2);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 25px 35px;
+      }
+      h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        .dark-mode & {
+          color: @white;
+        }
+      }
+      p {
+        font-size: 15px;
+        font-weight: lighter;
+        .dark-mode & {
+          color: @white;
+        }
+      }
+      h3 {
+        color: @secondary-color;
+        font-size: @font-size-base;
+        margin-top: 15px;
+        margin-bottom: 12px;
+      }
+      .ant-checkbox-wrapper {
+        font-size: @font-size-base;
+        .dark-mode & {
+          color: @white;
+        }
+        .ant-checkbox {
+          &::after {
+            border: 0;
+          }
+          .ant-checkbox-inner {
+            margin-top: -15px;
+            background: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 1px;
+            &::after {
+              border-width: 1px;
+              width: 4.5px;
+              height: 7.2px;
+            }
+          }
+          &.ant-checkbox-checked {
+            .ant-checkbox-inner {
+              background: @success-color;
+              border-color: @success-color;
+            }
+          }
+        }
+      }
+      .agree-btn {
+        padding-top: 18px;
+        .ant-btn {
+          padding: 0 80px;
+        }
+      }
+    }
+  }
+}

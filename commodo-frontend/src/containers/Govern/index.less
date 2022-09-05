@@ -1,0 +1,84 @@
+@import "../../assets/less/variables.less";
+
+.govern-card {
+  .governcard-head {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid rgba(@border-dark, 0.5);
+
+    .dark-mode & {
+      border-bottom: 1px solid rgba(@white, 0.5);
+    }
+
+    .ant-btn {
+      margin: 5px 10px;
+    }
+  }
+
+  .govern-card-content {
+    .governlist-row {
+      display: flex;
+      padding: 20px 40px 20px;
+      border-bottom: 1px solid rgba(@border-dark, 0.5);
+      cursor: pointer;
+
+      &:last-child {
+        border: 0;
+      }
+
+      .dark-mode & {
+        border-bottom: 1px solid rgba(@white, 0.2);
+      }
+
+      .left-section {
+        width: 55%;
+        padding-right: 10%;
+
+        h3 {
+          font-size: 20px;
+
+          .dark-mode & {
+            color: @white;
+          }
+        }
+      }
+
+      .right-section {
+        width: 45%;
+
+        .ant-progress {
+          .ant-progress-outer {
+            padding: 0;
+          }
+
+          .ant-progress-inner {
+            background: @bg-progress;
+            height: 15px;
+            overflow: inherit;
+
+            .ant-progress-bg {
+              background: @warning-color;
+              min-height: 100%;
+              position: relative;
+            }
+          }
+        }
+
+        label {
+          .dark-mode & {
+            color: @text-color-light;
+          }
+        }
+
+        p {
+          font-weight: bold;
+          font-size: 17px;
+
+          .dark-mode & {
+            color: @text-color-light;
+          }
+        }
+      }
+    }
+  }
+}

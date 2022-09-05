@@ -1,0 +1,454 @@
+@import "../../assets/less/variables.less";
+
+.dashboard-statics {
+  border-left: 2px solid @success-color;
+  line-height: 1;
+  margin: 0 0 30px;
+  color: @text-color-dark2;
+  padding: 5px 0 5px 15px;
+
+  .dark-mode & {
+    color: @white;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: @font-size-base;
+
+    @media screen and (max-width: 420px) {
+      font-size: @font-size-sm;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 8px;
+
+    @media screen and (max-width: 420px) {
+      font-size: 1.2rem;
+    }
+
+    .dark-mode & {
+      color: @white;
+    }
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.9rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 8px;
+
+    .dark-mode & {
+      color: @white;
+    }
+  }
+}
+
+.dashboard-upper {
+  display: flex;
+
+  @media screen and (max-width: 840px) {
+    display: block;
+  }
+
+  .dashboard-upper-left {
+    width: 50%;
+    padding-right: 20px;
+
+    @media screen and (max-width: 991px) {
+      padding-right: 10px;
+    }
+
+    @media screen and (max-width: 840px) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .commodo-card {
+      padding: 32px 40px;
+      @media screen and (max-width: 576px) {
+        padding: 20px 18px;
+      }
+    }
+
+    .total-values {
+      display: flex;
+      align-items: center;
+
+      .total-values-chart {
+        width: 50%;
+        text-align: left;
+      }
+
+      .total-values-right {
+        width: 50%;
+      }
+    }
+  }
+
+  .dashboard-upper-right {
+    width: 50%;
+    padding-left: 20px;
+
+    @media screen and (max-width: 840px) {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 15px;
+    }
+
+    .dashboardupper-chart {
+      padding: 12px 20px;
+      margin-bottom: 16px;
+
+      .dashboardupperchart-head {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 420px) {
+          display: block;
+        }
+
+        small {
+          font-size: @font-size-base;
+          font-weight: normal;
+        }
+
+        h4 {
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 1.2;
+
+          .dark-mode & {
+            color: @white;
+          }
+
+          span {
+            color: @success-color;
+            font-size: @font-size-sm;
+            font-weight: lighter;
+          }
+        }
+
+        p {
+          font-size: @font-size-lg;
+          font-weight: 500;
+
+          span {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+
+    .commodo-launch-card {
+      margin-bottom: 15px;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+      .commodo-launch-card-inner {
+        height: 100%;
+        min-height: 200px;
+        position: relative;
+        z-index: 1;
+        color: @white;
+        padding: 20px;
+        .launch-bg {
+          position: absolute;
+          height: 110%;
+          width: 100%;
+          z-index: -1;
+          top: 0;
+          right: 0;
+          object-fit: cover;
+          margin-left: auto;
+        }
+        .assets-section {
+          .assets-section-inner{
+            display: flex;
+            justify-content: space-between;
+          }
+          .upper-title{
+            color: @white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: 1.5;
+            @media screen and (max-width: 1367px) {
+              font-size: 0.9rem;
+            }
+          }
+          .assets-left {
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            .comingsoon-text{
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: 22px;
+              font-size: @font-size-lg + 4;
+              font-weight: 600;
+            }
+            .static-list{
+              list-style-type: none;
+              padding-left: 0;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              margin-bottom: 0;
+              li{
+                padding-top: 6px;
+                &:nth-child(3), &:nth-child(4){
+                  padding-top: 12px;
+                }
+                label{
+                  font-size: 1rem;
+                  line-height: 1;
+                }
+                p{
+                  font-size: 1.7rem;
+                  line-height: 1.1;
+                  font-weight: 600;
+                }
+              }
+            }
+            .small-icons {
+              display: flex;
+              align-items: center;
+              .icon-col {
+                display: flex;
+                align-items: center;
+                .icon {
+                  height: 19px;
+                  width: 19px;
+                  margin-right: 4px;
+                }
+              }
+            }
+            h3 {
+              color: @white;
+              font-size: 1.5rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              margin-bottom: 0;
+              small {
+                font-size: 13px;
+              }
+            }
+            .h3-botttom {
+              line-height: 1;
+              text-transform: inherit;
+            }
+            p {
+              color: @white;
+              font-size: 1.1rem;
+              font-weight: 700;
+              margin-bottom: 0;
+              line-height: 1.5;
+              @media screen and (max-width: 1367px) {
+                font-size: 0.9rem;
+              }
+            }
+          }
+          .assets-right {
+            text-align: center;
+            img {
+              width: 120px;
+              margin-bottom: 0.5rem;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+              &.commodo-logo{
+                width: 90px;
+                margin-top: 1.2rem;
+              }
+              @media screen and (max-width: 1367px) {
+                width: 100px;
+              }
+            }
+            h2{
+              margin-bottom: 0;
+              color: @white;
+              font-weight: 700;
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .top-three-assets {
+      padding: 15px 20px 10px 20px;
+
+      .card-head {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .card-content {
+        display: flex;
+
+        @media screen and (max-width: 480px) {
+          display: block;
+        }
+
+        .deposited-list {
+          width: 50%;
+          padding-right: 10%;
+
+          @media screen and (max-width: 480px) {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 10px;
+          }
+
+          p {
+            margin-bottom: 5px;
+            font-size: @font-size-lg;
+          }
+
+          ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 4px 0;
+
+              .assets-col {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                font-weight: 500;
+                font-size: 17px;
+
+                .dark-mode & {
+                  color: @white;
+                }
+
+                .assets-icon {
+                  width: 25px;
+                  height: 25px;
+                  min-width: 25px;
+                  border-radius: 25px;
+                  margin-right: 10px;
+
+                  .icon {
+                    width: 100%;
+                    height: 25px;
+                  }
+                }
+              }
+
+              b {
+                font-weight: bold;
+                color: @text-color-dark;
+                .dark-mode & {
+                  color: @text-color-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard-bottom {
+  margin-top: 16px;
+
+  .commodo-card {
+    padding: 15px 20px 10px;
+
+    .bottom-chart {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      @media screen and (max-width: 576px) {
+        display: block;
+      }
+
+      .bottom-chart-left {
+        width: 60%;
+
+        @media screen and (max-width: 576px) {
+          width: 100%;
+        }
+
+        .legend-custom {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .legend-deposit {
+            display: flex;
+            align-items: center;
+            font-weight: lighter;
+            margin-right: 20px;
+            color: @text-color-dark;
+            .dark-mode & {
+              color: @bg-light;
+            }
+            .icon {
+              fill: @success-color;
+              width: 10px;
+              height: 10px;
+              margin-right: 5px;
+            }
+          }
+
+          .legend-borrow {
+            display: flex;
+            align-items: center;
+            color: @text-color-dark;
+
+            .icon {
+              fill: @text-color-dark;
+              width: 10px;
+              height: 10px;
+              margin-right: 5px;
+              .dark-mode & {
+                fill: @bg-light;
+              }
+            }
+
+            .dark-mode & {
+              color: @bg-light;
+            }
+          }
+        }
+      }
+
+      .bottom-chart-right {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 576px) {
+          width: 100%;
+        }
+
+        .dashboard-statics {
+          margin: 15px 0 15px;
+          h2 {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

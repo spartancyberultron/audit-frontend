@@ -1,0 +1,183 @@
+@import "../../../assets/less/variables.less";
+
+.borrowbottom-cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    .longarrow-icon-middle{
+        position: absolute;
+        width: 100%;
+        max-width: 40px;
+        height: 77px;
+        fill: @background-light;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+    }
+    .cards{
+        display: flex;
+        justify-content: space-around;
+        max-width: 48%;
+        width: 100%;
+        background: linear-gradient(101.13deg, #E2F7E5 23.83%, rgba(0, 0, 0, 0.25) 121.33%);
+        padding: 1px;
+        border-radius: 10px;
+        position: relative;
+        .tooltip-icon{
+            position: absolute;
+            right: 8px;
+            top: 8px;
+        }
+        .cards-inner{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background: @background-light;
+            border-radius: 10px;
+            padding: 10px 0;
+            .dark-mode & {
+                background: @background-dark1;
+            }
+            .longarrow-icon{
+                width: 20%;
+                fill: @background-light;
+                height: 56px;
+                max-width: 40px;
+            }
+            .cards-colum{
+                text-align: center;
+                .inner-icon{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                    padding: 1px;
+                    border: 1px solid @border-dark;
+                    background: linear-gradient(180deg, #E2F7E5 0%, #032517 100%);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    .dark-mode & {
+                        border-color: @border-light;
+                    }
+                    .icon{
+                        background: #19315A;
+                        width: 99%;
+                        height: 99%;
+                        border-radius: 100%;
+                    }
+                }
+                p{
+                    margin-bottom: 0;
+                    margin-top: 3px;
+                    .dark-mode & {
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.token-overlay{
+    max-width: 400px !important;
+    width: 100%;
+    .ant-tooltip-inner{
+        padding: 10px !important;
+        border: 1px solid rgba(@background-light, 0.3);
+    }
+    &.token-overlay-small{
+        max-width: 200px !important;
+    }
+}
+
+
+
+.token-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .middle-arrow{
+        width: 24%;
+        .icon{
+            width: 100%;
+            fill: @bg-light;
+        }
+    }
+    .tokencard-col{
+        padding: 8px;
+        width: 38%;
+        label{
+            font-size: @font-size-sm;
+            text-transform: uppercase;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            line-height: 1;
+        }
+        .token-down-arrow{
+            height: 20px;
+            width: 100%;
+            fill: @bg-light;
+        }
+        .tokencard{
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            padding: 8px 15px 5px;
+            background: #405D4F;
+            &:nth-child(1){
+                margin-bottom: 10px;
+            }
+            .tokencard-icon{
+                width: 34px;
+                height: 34px;
+                border-radius: 34px;
+                background: linear-gradient(180deg, #E2F7E5 0%, #032517 100%);
+                padding: 1px;
+                margin: auto;
+                .icon{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    background: rgba(@bg-light, 0.2);
+                }
+            }
+            p{
+                margin-bottom: 0;
+                text-transform: uppercase;
+                font-size: @font-size-sm - 1;
+                margin-top: 3px;
+            }
+        }
+    }
+    &.token-details-small {
+        .tokencard-col {
+            width: 100%;
+        }
+    }
+}
+
+.available-amount{
+    display: flex;
+    justify-content: flex-end;
+    font-size: @font-size-base;
+    color: @text-color-dark;
+    font-weight: 600;
+
+    .dark-mode & {
+    color: @white;
+    }
+
+    span {
+    color: @success-color;
+    margin: 0;
+    }
+}
+
+.fs20{
+    font-size: 20px;
+}

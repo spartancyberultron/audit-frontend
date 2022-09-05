@@ -1,0 +1,45 @@
+@import "../../assets/less/variables.less";
+
+.market-table1 {
+  .ant-table {
+    .ant-table-body {
+      max-height: 30vh;
+      min-height: 50px;
+    }
+  }
+}
+
+.market-table2 {
+  .ant-table {
+    .ant-table-body {
+      max-height: 30vh;
+    }
+  }
+}
+
+.apy-percents {
+  border: 1px solid @success-color;
+  color: @success-color;
+  border-radius: 6px;
+  padding: 4px 4px 4px 4px;
+  display: flex;
+  font-size: @font-size-base - 2;
+  margin-left: 5px;
+
+  .icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 16px;
+    fill: @success-color;
+    margin-bottom: -2px;
+    fill: @success-color;
+    margin-left: 2px;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

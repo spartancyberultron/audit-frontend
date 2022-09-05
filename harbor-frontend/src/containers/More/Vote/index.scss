@@ -1,0 +1,34 @@
+@import "../../../assets/scss/style.scss";
+.totol-voting-main-container {
+  display: flex;
+  justify-content: flex-end;
+  .total-voting-container {
+    border: 2px solid white;
+    width: max-content;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    .dark-mode & {
+      border: 2px solid rgba($color: $secondary-color, $alpha: 0.3);
+    }
+    .total-veHARBOR {
+      font-size: 0.9rem;
+      letter-spacing: 0.7px;
+      font-weight: 400;
+      .dark-mode & {
+        color: white;
+      }
+      .fill-box {
+        font-weight: 600;
+        font-size: 1rem;
+        // padding: 7px 8px;
+        // border-radius: 10px;
+        .dark-mode & {
+          // background-color: $secondary-color;
+        }
+      }
+      span {
+        // font-weight: 300;
+      }
+    }
+  }
+}

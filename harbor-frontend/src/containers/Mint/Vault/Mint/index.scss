@@ -1,0 +1,175 @@
+@import "../../../../assets/scss/style.scss";
+.vault-mint-card {
+  .mint-title {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 15px;
+    .dark-mode & {
+      color: #fff;
+    }
+  }
+}
+.earn-deposite-card {
+  .card-head {
+    .head-left {
+      font-weight: 600;
+      font-size: 15px;
+      .dark-mode & {
+        color: #fff;
+      }
+    }
+    .liquidation-price-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .svg-icon-inner {
+        .icon {
+          height: 30px;
+          width: 30px;
+          background: $background-select-hover-dark;
+          padding: 2px;
+          border-radius: 50%;
+          .dark-mode & {
+            background: $white;
+          }
+        }
+      }
+      .das {
+        font-weight: 800;
+        height: 2px;
+        width: 10px;
+        margin-top: -3px;
+        background: #000;
+        .dark-mode & {
+          background: white;
+        }
+      }
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: -8px;
+        .dark-mode & {
+          color: white;
+        }
+      }
+      .price {
+        font-weight: 600;
+        margin-left: 5px;
+        margin-top: -8px;
+        font-size: 20px;
+        .dark-mode & {
+          color: white;
+        }
+      }
+    }
+    .oracle-price-container {
+      margin-top: -10px;
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+
+        .dark-mode & {
+          color: white;
+        }
+      }
+      .price {
+        font-weight: 600;
+        font-size: 20px;
+        .dark-mode & {
+          color: white;
+        }
+      }
+    }
+  }
+  .ant-row {
+    @media only screen and (max-width: 980px) {
+      gap: 10px;
+      justify-content: space-between;
+      padding-right: 10px;
+    }
+  }
+  .card-assets-container {
+    display: flex;
+    flex-direction: column;
+    .assets-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      .asset-name {
+        font-weight: 500;
+        .dark-mode & {
+          color: #fff;
+        }
+      }
+      .asset-value {
+        font-weight: 500;
+        .dark-mode & {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .vault-exist-margin {
+    margin-top: 3.5rem;
+  }
+}
+.red-track {
+  .ant-slider-track {
+    background: $error-color !important;
+  }
+  .ant-slider-handle {
+    border-color: $error-color !important;
+  }
+}
+.orange-track {
+  .ant-slider-track {
+    background: orange !important;
+  }
+  .ant-slider-handle {
+    border-color: orange !important;
+  }
+}
+.green-track {
+  .ant-slider-track {
+    background: $secondary-color !important;
+  }
+  .ant-slider-handle {
+    border-color: $secondary-color !important;
+  }
+}
+.small-text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+.collateral-deposit-main-box {
+  .collateral-deposit-up-box {
+  }
+  .collateral-deposit-down-box {
+    font-size: 16px;
+  }
+}
+.vault-fee-calculate-main-container-btn {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+  .fee-calculate-container-btn {
+    .fee-claim-tx-btn {
+      .ant-btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        line-height: 0;
+        .dark-mode & {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}

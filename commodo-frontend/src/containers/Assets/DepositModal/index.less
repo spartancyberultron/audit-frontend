@@ -1,0 +1,102 @@
+@import "../../../assets/less/variables.less";
+
+.ant-modal {
+  &.assets-modal {
+    .ant-modal-close {
+      top: 30px;
+      right: 24px;
+    }
+
+    .ant-modal-content {
+      padding: 15px 0 !important;
+
+      .ant-modal-body {
+        padding: 24px;
+
+        .dark-mode & {
+          color: @white;
+        }
+
+        .alert-label{
+          color: @error-color;
+          opacity: 0.8;
+          font-size: @font-size-base - 1;
+          margin-top: 3px;
+        }
+
+        .assets-max-half {
+          display: flex;
+          align-items: center;
+          margin-left: 4px;
+
+          .ant-btn {
+            font-size: @font-size-sm - 1;
+            padding: 1px 0;
+            margin-left: 4px;
+            line-height: 1;
+            text-align: center;
+            width: 30px;
+            height: 15px;
+            border: 0;
+            cursor: pointer;
+            border-radius: 2px;
+            background: @dark-color;
+            .dark-mode & {
+              background: #132239;
+              color: @white;
+            }
+
+            span {
+              font-weight: 600;
+            }
+
+            &.active {
+              .dark-mode & {
+                background: @white;
+              }
+
+              span {
+                color: @white;
+                .dark-mode & {
+                  color: @dark-color;
+                }
+              }
+            }
+          }
+        }
+
+        .available-balance {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          right: 15px;
+          font-size: @font-size-base - 1;
+          font-weight: 400;
+          .dark-mode & {
+            color: @white;
+          }
+          span {
+            font-weight: 700;
+            color: @success-color;
+          }
+        }
+
+        h3 {
+          font-size: 25px;
+
+          .dark-mode & {
+            color: @white;
+          }
+        }
+
+        .ant-radio-wrapper {
+          font-size: 21px;
+
+          .dark-mode & {
+            color: @white;
+          }
+        }
+      }
+    }
+  }
+}
